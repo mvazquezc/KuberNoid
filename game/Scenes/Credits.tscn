@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/8-bit Arcade In.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Credits.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 58
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.998
+margin_bottom = 0.200012
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+margin_top = 165.0
+margin_right = 352.0
+margin_bottom = 433.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 345.0
+margin_bottom = 261.0
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_right = 338.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 1 )
+text = "KuberNoid"
+align = 1
+
+[node name="Buttons" type="VBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+margin_top = 43.0
+margin_right = 338.0
+margin_bottom = 254.0
+custom_constants/separation = 11
+
+[node name="Programming" type="LinkButton" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_right = 338.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Programed by Mario Vazquez"
+underline = 1
+
+[node name="Breakout Assets2" type="LinkButton" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_top = 25.0
+margin_right = 338.0
+margin_bottom = 39.0
+focus_mode = 2
+custom_fonts/font = SubResource( 2 )
+text = "Breakout assets by MegacrashX"
+underline = 1
+
+[node name="Sound Effects Assets" type="LinkButton" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_top = 50.0
+margin_right = 338.0
+margin_bottom = 64.0
+focus_mode = 2
+custom_fonts/font = SubResource( 2 )
+text = "Sound Effects by MouthlessGames "
+underline = 1
+
+[node name="Font Asset" type="LinkButton" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_top = 75.0
+margin_right = 338.0
+margin_bottom = 89.0
+focus_mode = 2
+custom_fonts/font = SubResource( 2 )
+text = "8Bit Arcade Font by Damien Gosset "
+underline = 1
+
+[node name="Icons Assets" type="LinkButton" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_top = 100.0
+margin_right = 338.0
+margin_bottom = 114.0
+focus_mode = 2
+custom_fonts/font = SubResource( 2 )
+text = "Icons Assets By Hugo4IT"
+underline = 1
+
+[node name="Source" type="LinkButton" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_top = 125.0
+margin_right = 338.0
+margin_bottom = 139.0
+focus_mode = 2
+custom_fonts/font = SubResource( 2 )
+text = "Source Code"
+underline = 1
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_top = 150.0
+margin_right = 338.0
+margin_bottom = 170.0
+custom_fonts/font = SubResource( 3 )
+text = "Powered by Godot Engine"
+
+[node name="Go Back" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/Buttons"]
+margin_top = 181.0
+margin_right = 338.0
+margin_bottom = 211.0
+custom_fonts/font = SubResource( 4 )
+text = "Go Back"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Buttons/Programming" to="." method="_on_Programming_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Buttons/Breakout Assets2" to="." method="_on_Breakout_Assets_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Buttons/Sound Effects Assets" to="." method="_on_Sound_Effects_Assets_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Buttons/Font Asset" to="." method="_on_Font_Asset_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Buttons/Icons Assets" to="." method="_on_Icons_Assets_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Buttons/Source" to="." method="_on_Source_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Buttons/Go Back" to="." method="_on_Go_Back_pressed"]
