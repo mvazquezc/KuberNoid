@@ -15,6 +15,7 @@ func delete_brick():
 		var query = JSON.print(pod_data)
 		var headers = ["Content-Type: application/json"]
 		http_request.request(GameOptions.pod_lister_url + "/delete", headers, false, HTTPClient.METHOD_POST, query)
+	$CollisionShape2D.set_disabled(true)
 	$AnimatedSprite.visible = false
 	# Give some time for the request
 	$AudioStreamPlayer.play()
